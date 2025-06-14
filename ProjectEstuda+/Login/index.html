@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudo+ - Início</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="inicio">
+    <fieldset>
+      <h1>ESTUDO+</h1>
+      <form id="loginForm">
+        <label for="Nome">Nome de Usuário</label>
+        <input type="text" id="Nome" placeholder="Usuário" required minlength="5" maxlength="32">
+
+        <label for="pwd">Senha</label>
+        <input type="password" id="pwd" placeholder="Senha" required maxlength="6">
+
+        <div class="botoes">
+          <input type="reset" value="Limpar">
+          <input type="submit" value="Entrar">
+        </div>
+      </form>
+      <p class="ou">OU</p>
+      <button onclick="CriarPerfil()">CRIAR PERFIL</button>
+    </fieldset>
+  </div>
+
+  <div class="CriarPerfil">
+    <button class="voltar" onclick="voltar()">← VOLTAR</button>
+    <fieldset>
+      <legend><h2>Criação de Perfil</h2></legend>
+      <form id="dadosForm">
+        <label for="primeiroNome">Primeiro Nome</label>
+        <input type="text" id="primeiroNome" required maxlength="20" minlength="2" />
+
+        <label for="ultimoNome">Último Nome (opcional)</label>
+        <input type="text" id="ultimoNome" maxlength="20" />
+
+        <button type="button" onclick="gerarNome()">Gerar Nome de Usuário</button>
+
+        <div id="sugestoes">
+          <p>Escolha um nome de usuário:</p>
+
+          <div id="opcoes" >
+          </div>
+
+          <p>Ou <a href="" onclick="outroNome()">escreva o seu</a>:</p>
+          <input type="text" id="outroNome" placeholder="Digite seu nome de usuário">
+        </div>
+        <input type="hidden" id="nomeUsuario">
+        
+        <label for="genero">Gênero</label>
+        <select id="genero" required>
+          <option value="">Selecione...</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Prefiro não divulgar</option>
+        </select>
+
+        <label for="Ensino">Tipo de Ensino</label>
+        <select id="Ensino" required>
+          <option value="">Selecione...</option>
+          <option value="Fundamental">Fundamental</option>
+          <option value="Médio">Médio</option>
+          <option value="Superior">Superior</option>
+        </select>
+
+        <label for="classe">Classe</label>
+        <select id="classe" required disabled></select>
+
+        <label for="pin">Nova Senha</label>
+        <input type="password" id="pin" required maxlength="6" />
+
+        <div class="botoes">
+          <input type="reset" value="Limpar">
+          <button type="submit">Criar Perfil</button>
+        </div>
+      </form>
+    </fieldset>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

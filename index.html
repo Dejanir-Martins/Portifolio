@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio | Dejanir Martins</title>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Background animado único */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(120deg, #1b1b2f, #162447, #1f4068, #1b1b2f);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00e0ff;
+      box-shadow: 0 0 20px #00e0ff;
+      margin-bottom: 1rem;
+      transition: transform 0.4s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    .typing-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #00e0ff;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #00e0ff;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+      margin: auto;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 18ch }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: #00e0ff;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .projetos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid #00e0ff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 15px rgba(0, 224, 255, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(0, 224, 255, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 224, 255, 0.2);
+    }
+
+    .card h3 {
+      color: #00e0ff;
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .contato address {
+      font-style: normal;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0,0,0,0.5);
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    a {
+      color: #00e0ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<p style="display: none;"> 20240817_210725cut.jpg</p>
+  <header>
+    <img src= '20240817_210725cut.jpg' alt="Foto minha" class="profile-pic" >
+    <div class="typing-name">Dejanir Martins</div>
+    <p>Jovem criador de soluções digitais, estudante de informática.</p>
+  </header>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <p style="text-align: center;">
+      Sou estudante de informática no ITEL, apaixonado por redes, lógica e desenvolvimento de sistemas úteis. 
+      Transformo ideias em ferramentas reais com interfaces intuitivas e funcionais, sempre buscando inovação na educação digital.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projetos</h2>
+    <div class="projetos">
+
+      <a class="card" href="./ProjectVLSM/index.html" style="cursor: pointer;" target="_blank">
+        <h3>Simulador de Subnetting VLSM</h3>
+        <p>Calculadora em Java que gera sub-redes, IPs, broadcasts e máscaras dinamicamente com base nos hosts informados.</p>
+      </a>
+
+      <div class="card">
+        <h3>Sistema Escolar Mini</h3>
+        <p>App Java Swing para registrar alunos e notas, com organização de turmas e persistência local.</p>
+      </div>
+
+      <div class="card">
+        <h3>Quiz Interactivo</h3>
+        <p>Jogo educativo em HTML/CSS/JS com perguntas bíblicas ou técnicas, ideal para reforço escolar.</p>
+      </div>
+
+      <a class="card"href="./LembraAi/index.html" style="cursor: pointer;" target="_blank">
+        <h3>Lembra+</h3>
+        <p>Organizador escolar simples, com interface leve e focada na gestão de tarefas e lembretes diários.</p>
+      </a>
+
+      <a class="card" href="./ProjectEstuda+/Login/index.html" style="cursor: pointer;" target="_blank">
+        <h3>Estudo+</h3>
+        <p>Sistema online para gerir aulas, anotações, tarefas e provas. Em evolução constante para a versão Estudo++.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="contato">
+    <h2>Contacto</h2>
+    <address>Email: dejanir.diogo@gmail.com</address>
+    <address>GitHub: <a href="https://github.com/dejanir-martins" target="_blank">github.com/dejanir-martins</a></address>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dejanir Martins. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

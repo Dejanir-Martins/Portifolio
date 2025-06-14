@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Estudo+ | Página Inicial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Estudo+</h2>
+    <ul>
+      <li>📅 Horário</li>
+      <li>📁 Projetos</li>
+      <li>📝 Tarefas</li>
+      
+      <li>📊 Notas</li>
+      <li>📂 Trabalhos</li>
+      <li>📌 Provas</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1 id="saudacao">Bem-vindo(a), <span id="username">Estudante</span>!</h1>
+      <p>Ano Letivo: <span id="ano-letivo">2025</span> | Classe: <span id="classe">12ª</span></p>
+      <button id="btnLogout" style="background-color: #e74c3c; margin-left: 10px;">⏻ Terminar Sessão</button>
+      <button id="btnAdicionarDisciplina">+ Adicionar Disciplina</button>
+    </header>
+
+    <section id="disciplinas-container" class="disciplinas">
+      <!-- Disciplinas aparecem aqui -->
+    </section>
+  </main>
+<!-- Adicionar isto dentro do <body>, logo antes do <script> -->
+<div id="modalDisciplina" class="modal">
+  <div class="modal-content">
+    <h3>Nova Disciplina</h3>
+    <input type="text" id="novaDisciplinaNome" placeholder="Nome da disciplina">
+    <div class="modal-actions">
+      <button id="btnSalvarDisciplina">Salvar</button>
+      <button id="btnCancelarDisciplina" class="btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

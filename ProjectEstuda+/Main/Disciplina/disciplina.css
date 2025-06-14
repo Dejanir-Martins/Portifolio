@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fc;
+}
+
+.sidebar {
+  width: 250px;
+  background: #112d4e;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.sidebar .info p,
+.sidebar ul {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.sidebar ul {
+  padding-left: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#btnAdicionarAula {
+  padding: 10px 20px;
+  background-color: #3f72af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.aulas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.aula-bloco {
+  background: #dbe2ef;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.aula-bloco:hover {
+  background-color: #f1f5f9;
+}
+.aula-bloco {
+  padding: 10px;
+  margin: 10px;
+  background-color: #dceeff;
+  border: 1px solid #88b;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.painel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #448;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+.oculto {
+  display: none;
+}
+
+.botoes {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+#painel-aula input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}

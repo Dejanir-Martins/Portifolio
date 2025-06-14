@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Criação de Perfil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="formulario">
+    <!-- ETAPA 1: Nome e Sugestões -->
+    <div class="form-step" id="etapa1">
+      <h2>1. Digite seu Nome</h2>
+      <input type="text" id="nome" placeholder="Primeiro Nome" required oninput="gerarSugestoesNome()">
+      <input type="text" id="sobrenome" placeholder="Sobrenome" required oninput="gerarSugestoesNome()">
+
+      <div id="sugestoes-nome" style="display:none;">
+        <p>Escolha um nome de usuário:</p>
+        <div id="opcoes-nome"></div>
+      </div>
+      <input type="hidden" id="nomeUsuario">
+
+      <button type="button" id="btnEtapa1" onclick="salvarEtapa1()" disabled>Próximo</button>
+    </div>
+
+    <!-- ETAPA 2: Idade e Sexo -->
+    <div class="form-step" id="etapa2" style="display:none;">
+      <h2>2. Idade e Sexo</h2>
+      <input type="number" id="idade" placeholder="Idade" required>
+      <select id="sexo" required>
+        
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Outro">Prefiro Não Divulgar</option>
+      </select>
+      <div class="botoes">
+        <button type="button" onclick="voltarEtapa(1)">Voltar</button>
+        <button type="button" onclick="salvarEtapa2()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- ETAPA 3: Ensino e Classe -->
+    <div class="form-step" id="etapa3" style="display:none;">
+      <h2>3. Tipo de Ensino e Classe</h2>
+      <select id="ensino">
+        <option value="">Escolha o tipo de ensino</option>
+        <option value="Primário">Primário</option>
+        <option value="Secundário">Secundário</option>
+        <option value="Médio">Médio</option>
+      </select>
+      <input type="text" id="classe" placeholder="Classe ex: 10ª, 11ª, etc.">
+      <div class="botoes">
+        <button type="button" onclick="voltarEtapa(2)">Voltar</button>
+        <button type="button" onclick="salvarEtapa3()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- ETAPA 4: Disciplinas -->
+    <div class="form-step" id="etapa4" style="display:none;">
+      <h2>4. Disciplinas</h2>
+      <textarea id="disciplinas" placeholder="Lista as disciplinas separadas por vírgula..."></textarea>
+      <div class="botoes">
+        <button type="button" onclick="voltarEtapa(3)">Voltar</button>
+        <button type="button" onclick="salvarEtapa4()">Próximo</button>
+      </div>
+    </div>
+
+    <!-- ETAPA 5: Senha -->
+    <div class="form-step" id="etapa5" style="display:none;">
+      <h2>5. Definir Senha</h2>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <input type="password" id="confirmarSenha" placeholder="Confirmar Senha" required>
+      <div class="botoes">
+        <button type="button" onclick="voltarEtapa(4)">Voltar</button>
+        <button type="button" onclick="salvarSenha()">Finalizar</button>
+      </div>
+    </div>
+
+    <!-- CONFIRMAÇÃO -->
+    <div class="form-step" id="final" style="display:none;">
+      <h2>Perfil Criado!</h2>
+      <pre id="resumo"></pre>
+      <a href="../../Login/index.html"><button type="button">Fazer Login</button></a>
+    </div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

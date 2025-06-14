@@ -1,0 +1,155 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6fa;
+}
+
+.sidebar {
+  width: 200px;
+  background: #2b2e4a;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+#btnAdicionarDisciplina {
+  padding: 10px 20px;
+  background-color: #3f72af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.disciplinas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bloco-disciplina {
+  background: #dbe2ef;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.bloco-disciplina:hover {
+  background-color: #f9f7f7;
+}
+
+
+.menu-opcoes {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.3rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.menu-opcoes button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.menu-opcoes button:hover {
+  background: #f0f0f0;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+body.genero-homem {
+  background-color: #e4edfd;
+}
+
+body.genero-mulher {
+  background-color: #eea9c8;
+}
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal-actions button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#btnSalvarDisciplina {
+  background: #3f72af;
+  color: white;
+}
+
+.btn-cancelar {
+  background: #ccc;
+}

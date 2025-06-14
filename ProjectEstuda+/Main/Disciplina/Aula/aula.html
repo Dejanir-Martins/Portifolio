@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes da Aula | Estudo+</title>
+  <link rel="stylesheet" href="aula.css">
+</head>
+<body>
+  <button id="btn-voltar">← Voltar à Disciplina</button>
+  <h1 id="nome-aula">Aula</h1>
+
+  <h3>📎 Adicionar ou Atualizar PDF</h3>
+<form id="form-pdf">
+  <input type="file" id="pdf-upload" accept="application/pdf" required />
+  <button type="submit">📥 Enviar PDF</button>
+</form>
+
+
+  <div class="container">
+    <!-- Conteúdo principal -->
+    <main class="conteudo">
+      <div id="pdf-container" style="margin-bottom: 20px;">
+  <a href="#" id="ver-pdf" style="text-decoration: underline; color: blue;">📄 Ver Aula em PDF</a>
+  <div id="pdf-wrapper" style="display: none; margin-top: 10px;">
+    <embed id="pdf-aula" src="" width="100%" height="400px" type="application/pdf" />
+  </div>
+</div>
+
+
+      <h3>Notas da Aula</h3>
+      <textarea id="notas" rows="6" placeholder="Escreve aqui tuas anotações..."></textarea>
+    </main>
+
+    <!-- Barra lateral de tarefas -->
+    <aside class="barra-lateral">
+      <h3>📝 Tarefas</h3>
+      <ul id="lista-tarefas"></ul>
+      <button id="btnAdicionarTarefa">+ Nova Tarefa</button>
+    </aside>
+  </div>
+
+  <!-- Painel para adicionar tarefa -->
+  <div id="painel-tarefa" class="oculto painel">
+    <h3>Nova Tarefa</h3>
+    <form id="form-tarefa">
+      <label>Descrição:</label>
+      <input type="text" id="descricao-tarefa" required>
+      
+      <label>Data de entrega:</label>
+      <input type="date" id="data-entrega" required>
+      
+      <label>
+        <input type="checkbox" id="ativar-lembrete"> Ativar lembrete
+      </label>
+
+      <div class="botoes">
+        <button type="submit">Adicionar</button>
+        <button type="button" id="cancelar-tarefa">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="aula.js"></script>
+</body>
+</html>

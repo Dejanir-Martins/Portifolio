@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Disciplina | Estudo+</title>
+  <link rel="stylesheet" href="disciplina.css">
+</head>
+<body>
+  <button id="btn-voltar" style="margin: 10px; padding: 8px;">← Voltar à Página Inicial</button>
+
+  <aside class="sidebar">
+    <h2 id="disciplina-nome">Disciplina</h2>
+    <div class="info">
+      <p>📌 Próxima aula: <span id="proxima-aula">Terça-feira</span></p>
+      <p>📝 Tarefas pendentes:</p>
+      <ul id="lista-tarefas">
+        <li>Estudar capítulo 1</li>
+        <li>Resolver exercícios</li>
+      </ul>
+      <p>🧪 Próxima prova: <strong>12 de Junho</strong></p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1 id="titulo-disciplina">Aulas de ...</h1>
+    </header>
+
+    <!-- ✅ Container correto para as aulas -->
+    <section id="aulas-container" class="aulas">
+      <!-- Blocos de aulas serão inseridos aqui via JavaScript -->
+    </section><br>
+
+    <button id="btnAdicionarAula">+ Adicionar Aula</button>
+  </main>
+
+  <!-- ✅ Painel flutuante para adicionar aula -->
+  <div id="painel-aula" class="painel oculto">
+    <h3>Adicionar Nova Aula</h3>
+    <form id="form-aula">
+      <label for="nome-aula">Nome da Aula:</label>
+      <input type="text" id="nome-aula" required />
+
+      <label for="pdf-aula">Ficheiro PDF (opcional):</label>
+      <input type="file" id="pdf-aula" accept="application/pdf" />
+
+      <div class="botoes">
+        <button type="submit">Adicionar</button>
+        <button type="button" id="cancelar-aula">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- ✅ Certifica que o JS está no fim -->
+  <script src="disciplina.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#opcoes-nome button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+#opcoes-nome button.selecionado {
+  background-color: #4CAF50;
+  color: white;
+}
